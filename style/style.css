@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    background-color: #ece8e2;
+}
+
+nav p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav .me{
+    color: #300088;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+}
+
+nav li{
+    list-style: none;
+}
+
+.btn a{
+    color: #300088;
+}
+
+
+.land{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(148deg, #ece8e2 50%, #0e0e0e 50%);
+}
+
+.land section{
+    display: flex;
+    flex-direction: row;
+}
+
+.t1{
+    margin-right: 170px;
+    margin-top: 150px;
+}
+
+.t1 p{
+    font-size: 20px;
+}
+
+.t1 h1{
+    font-size: 40px;
+}
+
+.foto{
+    width: 250px;
+    height: 330px;
+    margin-top: 100px;
+    margin-left: -100px;
+    position: relative;
+    display: inline-block;
+}
+
+.foto::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Ajuste para mover a borda para cima */
+    right: 30px; /* Ajuste para mover a borda para direita */
+    bottom: -40px; /* Ajuste para mover a borda para baixo */
+    left: -30px; /* Ajuste para mover a borda para esquerda */
+    border: 5px solid #ece8e2; /* Estilo da borda */
+    z-index: 0; /* Fica atrás da imagem */
+}
+
+.foto img {
+    position: relative;
+    z-index: 1; /* Garante que a imagem fique sobre a borda */
+    display: block;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-right: 50px;
+    margin-top: 300px;
+}
+
+.barra{
+    width: 5px;
+    height: 100px;
+    background-color: #0e0e0e;
+    margin-left: 10px;
+}
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: #0e0e0e;
+    color: #ece8e2;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-sobre{
+    color: #ece8e2;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-sobre h1{
+    font-size: 50px;
+    margin-right: 600px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.parags{
+    color: #ece8e2;
+    font-size: 20px;
+    width: 40%;
+    margin-top: 50px;
+}
+
+.parags p{
+    margin: 20px;
+}
+
+.about .img2{
+    margin-top: 40px;
+}
+
+#page3{
+    width: 100%;
+    background-color: #ece8e2; 
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, #fff 0%, #0e0e0e34 70%);  
+}
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.use {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.use2 {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 30px;
+}
+
+.card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.h1-use{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 20px;
+}
+
+.cards2{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+footer{
+    background-color: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ece8e2;
+    height: 200px;
+}
+
+
+footer h1 a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #ece8e2;
+}
+
+.contato{
+    margin-top: 10px;
+}
+
+.contato p{
+    margin-top: 10px;
+}
+
+nav .btn button {
+    background: none;
+    border: none;
+    color: rgb(48, 29, 100);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Estilos do formulário */
+.form-container {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.form-container h2 {
+    margin-top: 0;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 96%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    background-color: #300088;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
